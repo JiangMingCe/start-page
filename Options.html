@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>功能</title>
+	<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="47.css">
+</head>
+<style>
+	
+	.bookmarks {
+	    display: grid;
+	    grid-template-columns: repeat(4, 1fr);
+	    padding: 0 20%;
+	}
+	
+	.bookmark {
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    align-items: center;
+	    width: 100px;
+	    height: 100px;
+	    margin: 0 auto;
+	    font-size: 0.9rem;
+	    background-color: rgba(0, 0, 0, 0.3);
+	    -webkit-backdrop-filter: blur(10px);
+	    backdrop-filter: blur(10px);
+	    text-decoration: none;
+	    color: white;
+	    border-radius: 8px;
+	    transition: all 0.3s ease;
+	    margin-bottom: 20px;
+	}
+	
+	.bookmark:hover {
+	    background-color: rgba(0, 0, 0, 0.6);
+	    transform: translateY(-10px);
+	}
+	body{
+		font-family: 'Montserrat', sans-serif, Arial, 'Microsoft Yahei';
+	}
+	
+	.bookmark img {
+	    width: 40px;
+	    height: 40px;
+	    margin-bottom: 5px;
+	}
+	
+	@media (max-width: 768px) {
+	    .bookmarks {
+	        grid-template-columns: repeat(3, 1fr);
+	        padding: 0;
+	    }
+	
+	
+	    .bookmark {
+	        width: 80px;
+	        height: 80px;
+	    }
+	}
+	.weather{
+		margin: 0 auto;
+	
+	}
+	h1{
+		font-size: 2.8rem;
+		color: white;
+		text-align: center;
+		margin-top: 80px;		
+		text-align:center;
+	}
+</style>
+	<body background="BingWallpaper.jpg">
+		<div class="container">
+		    <!-- --t是自定义属性，通过var函数可调用 -->
+		    <li style="--t:20%;">
+		        <a href="index.html">
+		            <i class="fa fa-home" aria-hidden="true"></i>
+		        </a>
+		    </li>
+		    <li style="--t:30%;">
+		        <a href="Options.html">
+		            <i class="fa fa-th-large" aria-hidden="true"></i>
+		        </a>
+		    </li>
+		    
+		    <div class="top"></div>
+		    <div class="middle"></div>
+		    <div class="bottom"></div>
+		</div>
+		<h1>常用网站</h1>
+		<ol>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ol>
+		<nav class="bookmarks">
+		    <a class="bookmark" href="https://www.baidu.com">
+		        <img src="baidu.png" alt="Baidu">
+		        百度
+		    </a>
+		    <a class="bookmark" href="https://www.bilibili.com">
+		        <img src="bilibili.png" alt="BiliBili">
+		        BiliBili</a>
+		    <a class="bookmark" href="https://tieba.baidu.com">
+		        <img src="tieba.png" alt="Tieba">
+		        贴吧</a>
+		    <a class="bookmark" href="https://github.com">
+		        <img src="github.png" alt="GitHub">
+		        GitHub</a>
+			<a class="bookmark" href="https://www.taobao.com">
+				<img src="taobao.png" alt="Taobao">
+				淘宝</a>
+			<a class="bookmark" href="https://www.jd.com">
+				<img src="jingdong.png" alt="Jingdong">
+				京东</a>
+			<a class="bookmark" href="https://www.douban.com">
+				<img src="douban.png" alt="Douban">
+				豆瓣</a>
+			<a class="bookmark" href="https://weibo.com">
+				<img src="weibo.png" alt="Weibo">
+				微博</a>
+		</nav>
+		<script src="https://bing-wallpaper-jsonp.herokuapp.com/?format=js&callback=getBingWallpaper"></script>
+		
+		
+	</body>
+</html>

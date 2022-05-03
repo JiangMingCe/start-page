@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="47.css">
+	<title>Document</title>
+</head>
+<style>
+	:root {
+	    /*--background-color: #b3b8b0;*/
+	    --border-color: #f5f2f7;
+	    --text-color: #7591AD;
+	    --color1: #EC3E27;
+	    --color2: #fd79a8;
+	    --color3: #0984e3;
+	    --color4: #00b894;
+	    --color5: #fdcb6e;
+	    --color6: #e056fd;
+	    --color7: #F97F51;
+	    --color8: #BDC581;
+	}
+	
+	* {
+	    margin: 0;
+	    padding: 0;
+	}
+	
+	html {
+	    font-size: 14px;
+	}
+	
+	body {
+	    width: 100vw;
+	    height: 100vh;
+	    background-color: var(--background-color);
+	    justify-content: center;
+	    align-items: center;
+	    font-family: 'Montserrat', sans-serif, Arial, 'Microsoft Yahei';
+	}
+	
+	
+	@font-face {
+	    font-family: "iconfont";
+	    src: url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAKsAAsAAAAABnAAAAJeAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAp8gRgBNgIkAwgLBgAEIAWEbQcwG74FEdWTB2Q/DuyY8FcY0Z8Dxdjg34Pn37W3+5LMb0qoAFARg6qrQ14wdv8cv+DJEUhAt3rM2ozizqgIRZOMB/9VUzbQw+RyXwLAiMNp87wLZP55l8sYg8aaNKmL4jiQAhxrUWRFEnnD2AUu4TgECCKRfKSppWsIi8EaJ4Bsra/OY3NeDIYlLIKvZqlBbnGw6ky9hJvw+/K7VCwoHI1V0rfSvETdt0I7Re96u0z5BHwgoNUOoIF8wIAM1UZ70Aija4KihlTYV6HAt8zzfAuyVyPC/jorPwSAeCi6J7EruVVuBYCB7pAK1I66DXRQSMjOw92YmAfncSPv7XfvRt+8GX79eujt25FIkBVAPryltjj3cfLjfy+Snz971t7+ol0duO6BOlR+VwU013/AJ6kbh9r99cv15Bq2aDf9HeoA8HYNehcBBCrCyh7Nhlf9t8EGgE8hozuU9LOD3b9N4D+JezYYXWqZlVHFtUlFKvr8ZUEEAR7YGcXXsbrYm0oKlthbsweQkEJjSScaaj4cgimHD0stgsijdXUw0WyjERMI5HIEIETghyKMZ9BE8IpoqF/gEMdf+IgQjSBGJHrLYDJFW1yjojOM1P9pGeRkx2ouKrxhCnunWWnIeEH9EqAyK4qJFid0jhn+M1VmTKxyUANOw74LXSorBstms6vOc657UzbIEbmoUdEZRur/tAxyst/eXOnzN0xh77Slrsb7gvqldyqzogexVZ296u7lFf+ZKjMmVjmoAYOw70JX/aAVg2XziPBV53Yz7qvK1tccX7cDCIosvYrtfmnk8xJ8kCgCAAAA') format('woff2');
+	}
+	
+	.iconfont {
+	    font-family: "iconfont" !important;
+	    font-size: 20px;
+	    font-style: normal;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	}
+	
+	.icon-sousuo:before {
+	    content: "\e62e";
+	}
+	
+	.search-box {
+	    width: 230px;
+	    height: 42px;
+	    background-color: var(--border-color);
+	    border-radius: 60px;
+	    display: flex;
+	    justify-content: flex-end;
+	    align-items: center;
+	    transition: 0.3s;
+		margin: 0px auto;
+		opacity: 0.5;
+	}
+	
+	.key {
+	    flex-shrink: 1;
+	    flex-grow: 1;
+
+	}
+	
+	.key input {
+	    width: calc(100% - 40px);
+	    height: 40px;
+	    padding: 0 20px;
+	    font-size: 18px;
+	    color: #636363;
+	    background: none;
+	    border: none;
+	    outline: none;
+
+	}
+	
+	.key input:focus {
+	    border: none;
+	    outline: none;
+	}
+	
+	.key input::-webkit-input-placeholder {
+		color: #999;
+	}
+	
+	.bt {
+	    flex-shrink: 0;
+	    flex-grow: 0;
+	    width: 60px;
+	    height: 60px;
+	    border-radius: 100%;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	}
+	#datetime {
+	    font-size: 2.8rem;
+	    color: white;
+	    text-align: center;
+		margin-top: 80px;		
+		text-align:center;
+
+	}
+	
+	.bt a {
+	    padding: 10px;
+	    border-radius: 100%;
+	    text-decoration: none;
+	    color: #fff;
+	    transition: 0.5s;
+	}
+	
+	.search-box.active {
+	    width: 600px;
+	}
+	
+	.search-box.active .bt a {
+	    background-color: var(--background-color);
+	}
+	.write{
+		font-size: 1.2rem;
+		color: white;
+		text-align: center;
+		margin-top: 80px;		
+		text-align:center;
+		font-weight:bold;
+	}
+	.text-frame{
+		font-weight:bold;
+	}
+	.bookmarks {
+	    display: grid;
+	    grid-template-columns: repeat(4, 1fr);
+	    padding: 0 20%;
+	}
+	
+	.bookmark {
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    align-items: center;
+	    width: 100px;
+	    height: 100px;
+	    margin: 0 auto;
+	    font-size: 0.9rem;
+	    background-color: rgba(0, 0, 0, 0.3);
+	    -webkit-backdrop-filter: blur(10px);
+	    backdrop-filter: blur(10px);
+	    text-decoration: none;
+	    color: white;
+	    border-radius: 8px;
+	    transition: all 0.3s ease;
+	    margin-bottom: 20px;
+	}
+	
+	.bookmark:hover {
+	    background-color: rgba(0, 0, 0, 0.6);
+	    transform: translateY(-10px);
+	}
+	
+	.bookmark img {
+	    width: 40px;
+	    height: 40px;
+	    margin-bottom: 5px;
+	}
+	
+	@media (max-width: 768px) {
+	    .bookmarks {
+	        grid-template-columns: repeat(3, 1fr);
+	        padding: 0;
+	    }
+	
+	
+	    .bookmark {
+	        width: 80px;
+	        height: 80px;
+	    }
+	}
+	.weather{
+		margin: 0 auto;
+
+	}
+	
+	
+</style>
+<body background="BingWallpaper.jpg">
+	
+	<div class="container">
+	    <!-- --t是自定义属性，通过var函数可调用 -->
+	    <li style="--t:20%;">
+	        <a href="index.html">
+	            <i class="fa fa-home" aria-hidden="true"></i>
+	        </a>
+	    </li>
+	    <li style="--t:30%;">
+	        <a href="Options.html">
+	            <i class="fa fa-th-large" aria-hidden="true"></i>
+	        </a>
+	    </li>
+	    
+	    <div class="top"></div>
+	    <div class="middle"></div>
+	    <div class="bottom"></div>
+	</div>
+	
+	<div id="datetime">
+		稍等
+	</div>
+	<ol>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ol>
+	
+		
+	
+	
+
+	
+    <div class="search-box">
+		
+        <div class="key">
+			<script>
+				
+			</script>
+				 <form action="https://www.baidu.com/s">
+					    <input type="text" class="text-frame" name="wd" placeholder="Search">
+						
+				</form>
+        </div>
+		
+    </div>
+	
+	
+    <script>
+        var box = document.querySelector('.search-box');
+
+   
+        box.addEventListener('mouseover', () => {
+
+            box.classList.add('active');
+        });
+
+
+        box.addEventListener('click',(e)=>{
+
+            e.stopPropagation();
+        });
+
+        document.body.addEventListener('click', () => {
+            
+            box.classList.remove('active');
+        });
+
+    </script>
+	
+	<script>
+	    var datetimeEl = document.querySelector('#datetime')
+	    function setCurrentTime() {
+	        var hours = ('0' + (new Date()).getHours()).slice(-2)
+	        var mins = ('0' + (new Date()).getMinutes()).slice(-2)
+	        datetimeEl.innerHTML = `${hours}:${mins}`
+	    }
+	
+	    setCurrentTime()
+		
+	
+	    setInterval(function () {
+	        setCurrentTime()
+	    }, 5000)
+	
+	    function getBingWallpaper(resp) {
+	        const url = 'https://cn.bing.com' + resp.images[0].url
+	        const bodyEl = document.querySelector('body')
+	        bodyEl.style.backgroundImage = `url(${url})`
+	    }
+		
+	</script>
+	<div class="write">
+		<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+		<div id="poem_sentence"></div>
+		<div id="poem_info"></div>
+		<script type="text/javascript">
+		  jinrishici.load(function(result) {
+		    var sentence = document.querySelector("#poem_sentence")
+		    var info = document.querySelector("#poem_info")
+		    sentence.innerHTML = result.data.content
+		    info.innerHTML = "———"+ result.data.origin.author + '《' + result.data.origin.title + '》'
+		  });
+		</script>
+	</div>
+	
+	
+	
+
+	
+	
+	
+	
+	
+		
+</body>
+</html>
