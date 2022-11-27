@@ -1,89 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-	<meta charset="utf-8">
-	<title>功能</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="47.css">
+	<title>Document</title>
 </head>
 <style>
-	
-	.bookmarks {
-	    display: grid;
-	    grid-template-columns: repeat(4, 1fr);
-	    padding: 0 20%;
+	:root {
+	    --border-color: #f5f2f7; 
 	}
 	
-	.bookmark {
-	    display: flex;
-	    flex-direction: column;
-	    justify-content: center;
-	    align-items: center;
-	    width: 100px;
-	    height: 100px;
-	    margin: 0 auto;
-	    font-size: 0.9rem;
-	    background-color: rgba(0, 0, 0, 0.3);
-	    -webkit-backdrop-filter: blur(10px);
-	    backdrop-filter: blur(10px);
-	    text-decoration: none;
-	    color: white;
-	    border-radius: 8px;
-	    transition: all 0.3s ease;
-	    margin-bottom: 20px;
-	}
-	
-	.bookmark:hover {
-	    background-color: rgba(0, 0, 0, 0.6);
-	    transform: translateY(-10px);
-	}
-	body{
-		font-family: 'Montserrat', sans-serif, Arial, 'Microsoft Yahei';
-	}
-	
-	.bookmark img {
-	    width: 40px;
-	    height: 40px;
-	    margin-bottom: 5px;
-	}
-	
-	@media (max-width: 768px) {
-	    .bookmarks {
-	        grid-template-columns: repeat(3, 1fr);
-	        padding: 0;
-	    }
 	
 	
-	    .bookmark {
-	        width: 80px;
-	        height: 80px;
-	    }
+	html {
+	    font-size: 14px;
 	}
-	.weather{
-		margin: 0 auto;
 	
-	}
-	h1{
-		font-size: 2.8rem;
-		color: white;
-		text-align: center;
-		margin-top: 80px;		
-		text-align:center;
-	}
-	body{
+	body {
 		margin: 0;
 		padding: 0;
-		align-items: center;
-		height: 100vh;
+	    align-items: center;
+	    height: 100vh;
 		
-		justify-content: center;
-		align-items: center;
+	    justify-content: center;
+	    align-items: center;
 		background: linear-gradient(125deg,#2c3e50,#27ae60,#2980b9,#e74c3c,#8e44ad);
 		/* 指定背景图像的大小 */
 		background-size: 500%;
 		/* 执行动画：动画名 时长 线性的 无限次播放 */
 		animation: bgAnimation 15s linear infinite;
-		font-family: 'Montserrat', sans-serif, Arial, 'Microsoft Yahei';
+	    font-family: 'Montserrat', sans-serif, Arial, 'Microsoft Yahei';
 	}
 	@keyframes bgAnimation {
 	    0%{
@@ -96,60 +45,262 @@
 	        background-position: 0% 50%;
 	    }
 	}
+	
+	
+	@font-face {
+	    font-family: "iconfont";
+	    src: url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAKsAAsAAAAABnAAAAJeAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAp8gRgBNgIkAwgLBgAEIAWEbQcwG74FEdWTB2Q/DuyY8FcY0Z8Dxdjg34Pn37W3+5LMb0qoAFARg6qrQ14wdv8cv+DJEUhAt3rM2ozizqgIRZOMB/9VUzbQw+RyXwLAiMNp87wLZP55l8sYg8aaNKmL4jiQAhxrUWRFEnnD2AUu4TgECCKRfKSppWsIi8EaJ4Bsra/OY3NeDIYlLIKvZqlBbnGw6ky9hJvw+/K7VCwoHI1V0rfSvETdt0I7Re96u0z5BHwgoNUOoIF8wIAM1UZ70Aija4KihlTYV6HAt8zzfAuyVyPC/jorPwSAeCi6J7EruVVuBYCB7pAK1I66DXRQSMjOw92YmAfncSPv7XfvRt+8GX79eujt25FIkBVAPryltjj3cfLjfy+Snz971t7+ol0duO6BOlR+VwU013/AJ6kbh9r99cv15Bq2aDf9HeoA8HYNehcBBCrCyh7Nhlf9t8EGgE8hozuU9LOD3b9N4D+JezYYXWqZlVHFtUlFKvr8ZUEEAR7YGcXXsbrYm0oKlthbsweQkEJjSScaaj4cgimHD0stgsijdXUw0WyjERMI5HIEIETghyKMZ9BE8IpoqF/gEMdf+IgQjSBGJHrLYDJFW1yjojOM1P9pGeRkx2ouKrxhCnunWWnIeEH9EqAyK4qJFid0jhn+M1VmTKxyUANOw74LXSorBstms6vOc657UzbIEbmoUdEZRur/tAxyst/eXOnzN0xh77Slrsb7gvqldyqzogexVZ296u7lFf+ZKjMmVjmoAYOw70JX/aAVg2XziPBV53Yz7qvK1tccX7cDCIosvYrtfmnk8xJ8kCgCAAAA') format('woff2');
+	}
+	
+	.iconfont {
+	    font-family: "iconfont" !important;
+	    font-size: 20px;
+	    font-style: normal;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	}
+	
+	.icon-sousuo:before {
+	    content: "\e62e";
+	}
+	
+	.search-box {
+	    width: 230px;
+	    height: 42px;
+	    background-color: var(--border-color);
+	    border-radius: 60px;
+
+
+	    transition: 0.3s;
+		margin: 0px auto;
+		opacity: 0.5;
+		
+	}
+	
+	.key {
+	    flex-shrink: 1;
+	    flex-grow: 1;
+
+	}
+	
+	.key input {
+	    width: calc(100% - 40px);
+	    height: 40px;
+	    padding: 0 20px;
+	    font-size: 18px;
+	    color: #636363;
+	    background: none;
+	    border: none;
+	    outline: none;
+
+	}
+	
+	.key input:focus {
+	    border: none;
+	    outline: none;
+	}
+
+
+	
+	.key input::-webkit-input-placeholder {
+		color: #999;
+	}
+	
+	
+	#datetime {
+	    font-size: 2.7rem;
+	    color: white;
+	    text-align: center;
+		margin-top: 80px;		
+		text-align:center;
+
+	}
+	
+	.bt a {
+	    padding: 10px;
+	    border-radius: 100%;
+	    text-decoration: none;
+	    color: #fff;
+	    transition: 0.5s;
+	}
+	
+	.search-box.active {
+	    width: 600px;
+	}
+	
+	.search-box.active .bt a {
+	    background-color: var(--background-color);
+	}
+	.write{
+		font-size: 1.1rem;
+		color: white;
+		text-align: center;
+		margin-top: 80px;		
+		text-align:center;
+
+	}
+	.search{
+	    width:514px;
+	    border:1px solid #ccc;
+	    display: none;
+		background-color: #E1E1E1;
+		transition: 0.3s;
+	}
+	ul{
+	    list-style: none;
+	}
+	li{
+	    line-height: 20px;
+	    font-size: 14px;
+	    cursor:pointer;
+	    box-sizing: border-box;
+	    padding:0 5px; 
+	}
+	a{
+		color: black;
+		text-decoration:none;
+	}
+	.search{
+	    width:600px;
+	    border:1px solid #ccc;
+	    border-radius: 20px;
+		background-color: #E1E1E1;
+	}
+	p{
+		text-align: center;
+	}
+
+	
 </style>
-	<body>
-		<div class="container">
-		    <!-- --t是自定义属性，通过var函数可调用 -->
-		    <li style="--t:20%;">
-		        <a href="index.html">
-		            <i class="fa fa-home" aria-hidden="true"></i>
-		        </a>
-		    </li>
-		    <li style="--t:30%;">
-		        <a href="Options.html">
-		            <i class="fa fa-th-large" aria-hidden="true"></i>
-		        </a>
-		    </li>
+<body>
+
+	<div class="container">
+	    <li style="--t:20%;">
+	        <a href="index.html">
+	            <i class="fa fa-home" aria-hidden="true"></i>
+	        </a>
+	    </li>
+	    <li style="--t:30%;">
+	        <a href="Options.html">
+	            <i class="fa fa-th-large" aria-hidden="true"></i>
+	        </a>
+	    </li>
+	    
+	    <div class="top"></div>
+	    <div class="middle"></div>
+	    <div class="bottom"></div>
+	</div>
+	
+	<div id="datetime">
+		稍等
+	</div>
+	
+	<li></li>
+<div class="search-box">
+	<div class="key">
+		
+			 <form action="https://www.baidu.com/s">
+					<input type="text" id="text" class="text-frame" name="wd" placeholder="Search">
+
+			</form>
+	</div>
+	<div class="search">
+		<ul>
+			
+		</ul>   
+	</div>
+</div>
+    <script>
+        var box = document.querySelector('.search-box');
+
+   
+        box.addEventListener('mouseover', () => {
+
+            box.classList.add('active');
+        });
+
+
+        box.addEventListener('click',(e)=>{
+
+            e.stopPropagation();
+        });
+
+        document.body.addEventListener('click', () => {
+            
+            box.classList.remove('active');
+        });
+
+    </script>
+	
+	<script>
+	    var datetimeEl = document.querySelector('#datetime')
+	    function setCurrentTime() {
+	        var hours = ('0' + (new Date()).getHours()).slice(-2)
+	        var mins = ('0' + (new Date()).getMinutes()).slice(-2)
+	        datetimeEl.innerHTML = `${hours}:${mins}`
+	    }
+	
+	    setCurrentTime()
+		
+	
+	    setInterval(function () {
+	        setCurrentTime()
+	    }, 5000)
+	
+	    function getBingWallpaper(resp) {
+	        const url = 'https://cn.bing.com' + resp.images[0].url
+	        const bodyEl = document.querySelector('body')
+	        bodyEl.style.backgroundImage = `url(${url})`
+	    }
+		
+	</script>
+	<div class="write">
+		<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+		<div id="poem_sentence"></div>
+		<div id="poem_info"></div>
+		<script type="text/javascript">
+		  jinrishici.load(function(result) {
+		    var sentence = document.querySelector("#poem_sentence")
+		    var info = document.querySelector("#poem_info")
+		    sentence.innerHTML = '「' +result.data.content+ '」'
 		    
-		    <div class="top"></div>
-		    <div class="middle"></div>
-		    <div class="bottom"></div>
-		</div>
-		<h1>常用网站</h1>
-		<ol>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ol>
-		<nav class="bookmarks">
-		    <a class="bookmark" href="https://www.baidu.com">
-		        <img src="baidu.png" alt="Baidu">
-		        百度
-		    </a>
-		    <a class="bookmark" href="https://www.bilibili.com">
-		        <img src="bilibili.png" alt="BiliBili">
-		        BiliBili</a>
-		    <a class="bookmark" href="https://tieba.baidu.com">
-		        <img src="tieba.png" alt="Tieba">
-		        贴吧</a>
-		    <a class="bookmark" href="https://github.com">
-		        <img src="github.png" alt="GitHub">
-		        GitHub</a>
-			<a class="bookmark" href="https://www.taobao.com">
-				<img src="taobao.png" alt="Taobao">
-				淘宝</a>
-			<a class="bookmark" href="https://www.jd.com">
-				<img src="jingdong.png" alt="Jingdong">
-				京东</a>
-			<a class="bookmark" href="https://www.douban.com">
-				<img src="douban.png" alt="Douban">
-				豆瓣</a>
-			<a class="bookmark" href="https://weibo.com">
-				<img src="weibo.png" alt="Weibo">
-				微博</a>
-		</nav>
-		<script src="https://bing-wallpaper-jsonp.herokuapp.com/?format=js&callback=getBingWallpaper"></script>
+		  });
+		</script>
 		
 		
-	</body>
+	</div>
+	
+</body>
+<script>
+	        var text = document.getElementById('text');
+	        var search = document.getElementsByClassName('search')[0];
+	        var oul = document.querySelector(".search ul");
+	        var go =document.getElementById("go");
+	        // 每次键盘抬起
+	        text.onkeyup = function(){
+	            // 获取输入框里面的内容
+	            var val = this.value;
+	            // 如果输入框中不为空，就让联想列表出现，否则消失
+	            search.style.display=this.value!=""?"block":"none";
+	            // 每次松开键盘，都要通过script标签向百度接口获取数据
+	            // 所以每次松开键盘都要生成一个script标签，通过src属性来跨域请求
+	            var sc = document.createElement("script");
+	            sc.src = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+ val+"&cb=lyl";
+	            document.body.appendChild(sc);
+	        }
+	        // data参数就是链接返回的json数据，data是一个对象,data.s就是我们找的联想词
+	        function lyl(data){
+	            // console.log(data);
+	            oul.innerHTML="";//清空
+	            // 数组遍历forEach,里面有回调函数
+	            data.s.forEach(function(el){
+	                // console.log(el);
+	                // 生成li
+	                var lis = document.createElement("li");
+	                // li链接到的地址<a href='https://www.baidu.com/s?wd=el
+	                lis.innerHTML = "<a href='https://www.baidu.com/s?wd="+el+"'>"+el+"</a>";
+	                oul.appendChild(lis);
+	            })
+	        }
+	    </script>
 </html>
